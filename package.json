@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/coleenhuang/Ancient-Greek-Verbs-API/issues"
   },
-  "homepage": "https://github.com/coleenhuang/Ancient-Greek-Verbs-API#readme"
+  "homepage": "https://github.com/coleenhuang/Ancient-Greek-Verbs-API#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "pg": "^8.5.1"
+  }
 }
