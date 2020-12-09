@@ -1,0 +1,10 @@
+CREATE TABLE principal_parts(
+    ID SERIAL PRIMARY KEY,
+    one VARCHAR(255) NOT NULL,
+    two VARCHAR(255) NOT NULL,
+    three VARCHAR(255) NOT NULL,
+    four VARCHAR(255) NOT NULL,
+    five VARCHAR(255) NOT NULL,
+    six VARCHAR(255) NOT NULL,
+    meaning VARCHAR(255)
+);
