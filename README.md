@@ -1,4 +1,4 @@
-# Ancient-Greek-Verbs-API
+# Ancient-Greek-Vocab-API
 
 This API is meant to help me where I've struggled the most in my studies with Ancient Greek - the verbs. My hope is that as I work on this API and associated applications utilizing it, I will be much more proficient at parsing and conjugating Greek verbs.
 
