@@ -1,0 +1,14 @@
+
+CREATE TABLE vocab_sets(
+  ID SERIAL PRIMARY KEY,
+  book_name VARCHAR(299),
+  chapter VARCHAR(299)
+);
+
+CREATE TABLE vocab(
+  ID SERIAL PRIMARY KEY,
+  word VARCHAR(299) NOT NULL,
+  def_en VARCHAR(299) NOT NULL,
+  def_zh VARCHAR(299) NOT NULL,
+  set_id INTEGER REFERENCES vocab_sets(id) ON DELETE CASCADE
+);
