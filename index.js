@@ -4,7 +4,7 @@ const cors = require('cors');
 const {pool} = require('./config');
 const { response } = require('express');
 const partsRouter = require('./routes/parts');
-
+const vocabRouter = require('./routes/vocab')
 
 const app = express();
 
@@ -15,11 +15,9 @@ app.use(cors());
 
 
 app.use('/parts', partsRouter);
-
+app.use('/vocab', vocabRouter)
 
 //start server
 app.listen(process.env.PORT || 3002, () => {
     console.log('Server listening')
 })
-
-

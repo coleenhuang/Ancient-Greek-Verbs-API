@@ -14,4 +14,4 @@ VALUES('ἠ, ἀστραπή, ἀστραπής', 'lightning', '閃電', 1),
 ('διότι', 'because', '因為', 1),
 ('ἡ, ἀγορά, ἀγορᾶς','agora, marketplace', '集會、市場', 5),
 ('ἡ, οἰκία, οἰκιάς','house', '房子', 5),
-('ἡ, συμφορά, συμφορᾶς','circumstance, misfortune, disaster', '情況、災難', 5)
+('ἡ, συμφορά, συμφορᾶς','circumstance, misfortune, disaster', '情況、災難', 5);
