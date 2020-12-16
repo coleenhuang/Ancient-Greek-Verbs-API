@@ -4,6 +4,8 @@ This API is meant to help me with my struggles of memorizing vocab in Ancient Gr
 
 ## Endpoints
 
+## GET
+
 ### /parts
 
 returns a list of verbs with all six principal parts and their meanings
@@ -12,8 +14,16 @@ returns a list of verbs with all six principal parts and their meanings
 
 returns a list of folders
 
+/folders/:folder_id
+
+returns the sets within a specific folder
+
 ### /sets
 returns a list of all sets
+
+/sets/:set_id
+
+returns the vocab for a specific set
 
 ### /vocab
 
@@ -21,9 +31,7 @@ default - returns all vocab and definitions
 
 parameters
 
-set_id(required)
 
-returns the vocab for a specific set
 
 ### /irregular (under construction)
 
