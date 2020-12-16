@@ -13,6 +13,8 @@ const getVocab = (request, response) => {
 }
 
 
+
+
 router.get('/', getVocab);
 
 

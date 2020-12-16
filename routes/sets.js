@@ -13,6 +13,8 @@ const getSets = (request, response) => {
   })
 }
 
+//Add another route where you get the vocab by set id
+
 router.get('/', getSets);
 
 
