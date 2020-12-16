@@ -1,0 +1,4 @@
+CREATE TABLE folders(
+  ID SERIAL PRIMARY KEY,
+  folder_name VARCHAR(299)
+);
