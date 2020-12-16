@@ -8,20 +8,20 @@ This API is meant to help me with my struggles of memorizing vocab in Ancient Gr
 
 returns a list of verbs with all six principal parts and their meanings
 
-### /sets
+### /folders
 
-returns a list of the vocab sets
+returns a list of folders
+
+### /sets
+returns a list of all sets
 
 ### /vocab
 
 default - returns all vocab and definitions
 
-/set
-
 parameters
 
-book_name(required)
-chapter
+set_id(required)
 
 returns the vocab for a specific set
 
