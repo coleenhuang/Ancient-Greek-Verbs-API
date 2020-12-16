@@ -1,8 +1,12 @@
+CREATE TABLE folders(
+  ID SERIAL PRIMARY KEY,
+  folder_name VARCHAR(299)
+);
 
 CREATE TABLE vocab_sets(
   ID SERIAL PRIMARY KEY,
-  book_name VARCHAR(299),
-  chapter VARCHAR(299)
+  set_name VARCHAR(299),
+  folder_id INTEGER REFERENCES folders(id) ON DELETE CASCADE
 );
 
 CREATE TABLE vocab(
