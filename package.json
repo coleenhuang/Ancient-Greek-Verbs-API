@@ -11,6 +11,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "migrate": "postgrator --config postgrator-config.js",
+    "migrate:test": "env NODE_ENV=test npm run migrate",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -33,6 +34,9 @@
     "postgrator": "^4.1.1"
   },
   "devDependencies": {
-    "postgrator-cli": "^3.2.0"
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "postgrator-cli": "^3.2.0",
+    "supertest": "^6.0.1"
   }
 }
