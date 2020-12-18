@@ -12,25 +12,23 @@ returns a list of verbs with all six principal parts and their meanings
 ### /folders  
 returns a list of folders  
 
-/folders/:folder_id  
+#### /folders/:folder_id  
 returns the sets within a specific folder
 
 ### /sets  
 returns a list of all sets
 
-/sets/:set_id  
+#### /sets/:set_id  
 returns the vocab for a specific set
 
 ### /vocab  
 returns all vocab and definitions  
 
-### /irregular (under construction)
-
-/verbs
+#### irregular/verbs
 parameter   
-tense - limits the results to a certain tense
+tense(optional) - limits the results to a certain tense
 
 returns the conjugations of the verb
 
-/nouns  
+#### irregular/nouns  
 returns the declined forms of the nouns
