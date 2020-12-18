@@ -5,7 +5,7 @@ const router = express.Router();
 
 
 const getFolders = (request, response) => {
-    //gets all verbs and their principal parts
+    //gets all folders
     pool.query('SELECT * FROM folders', (error, results) => {
         if (error) {
             throw(error)
@@ -14,6 +14,20 @@ const getFolders = (request, response) => {
     })
 }
 
+const getFolderSets = (request, response) => {
+  //gets all sets within a folder
+  const folderId = request.params.folder_id
+  pool.query('SELECT * FROM vocab_sets WHERE folder_id = $1', [folderId], (error, results) => {
+      if (error) {
+          throw(error)
+      }
+      response.status(200).json(results.rows)
+  })
+}
+
+
+
 router.get('/', getFolders);
+router.get('/:folder_id', getFolderSets)
 
 module.exports = router;

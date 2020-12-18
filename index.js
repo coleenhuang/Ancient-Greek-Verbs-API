@@ -1,5 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser')
 const cors = require('cors');
 const {pool} = require('./config');
 const { response } = require('express');
@@ -12,7 +14,9 @@ const folderRouter = require('./routes/folders');
 const app = express();
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(logger('dev'));
+app.use(cookieParser())
 app.use(cors());
 
 
