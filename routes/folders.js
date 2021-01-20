@@ -25,9 +25,21 @@ const getFolderSets = (request, response) => {
   })
 }
 
+const createFolder = (request, response) => {
+    //creates a new folder
+    const { folder } = request.body
+    pool.query('INSERT INTO folders (folder_name) VALUES ($1)', [folder], (error, result) => {
+        if (error) {
+          throw error
+        }
+        console.log(result)
+        response.status(201).send(`folder added with ID: `)
+      })
+}
+
 
 
 router.get('/', getFolders);
 router.get('/:folder_id', getFolderSets)
-
+router.post('/', createFolder)
 module.exports = router;
