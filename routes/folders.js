@@ -32,8 +32,7 @@ const createFolder = (request, response) => {
         if (error) {
           throw error
         }
-        console.log(result)
-        response.status(201).send(`folder added with ID: `)
+        response.status(201).send(`folder added`)
       })
 }
 

@@ -14,6 +14,7 @@ const getSets = (request, response) => {
 }
 
 const getSetVocab = (request, response) => {
+  //gets vocab within a specific set
   const setId = request.params.set_id;
 
   pool.query('SELECT * FROM vocab WHERE set_id = $1', [setId], (error, results) => {
@@ -25,11 +26,21 @@ const getSetVocab = (request, response) => {
 }
 
 
+const createSet = (request, response) => {
+  //creates a new set
+  const { set, folder } = request.body
+  pool.query('INSERT INTO vocab_sets(set_name, folder_id) VALUES ($1, $2)', [set, folder], (error, result) => {
+      if (error) {
+        throw error
+      }
+      response.status(201).send(`set added`)
+    })
+}
 
-//Add another route where you get the vocab by set id
 
 router.get('/', getSets);
 router.get('/:set_id', getSetVocab)
+router.post('/', createSet);
 
 
 module.exports = router;
